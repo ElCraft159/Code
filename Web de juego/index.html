@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para la mujer más especial, Jenny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Pantalla de inicio -->
+        <div id="splash-screen" class="screen">
+            <h1>Para la mujer más especial, Jenny</h1>
+            <p class="mensaje-bienvenida">
+                Bienvenida, mi amor. Este juego es para ti, por ser la persona más especial de mi vida.<br>
+                Espero que lo disfrutes mucho.<br>
+                <strong>Con todo mi amor.</strong>
+            </p>
+            <button id="btn-iniciar" class="btn-grande">Comenzar</button>
+        </div>
+        <!-- Pantalla de juego -->
+        <div id="game-screen" class="screen hidden">
+            <div id="nivel-info"></div>
+            <div id="progreso-nivel"></div>
+            <div id="pregunta"></div>
+            <div id="opciones"></div>
+            <div id="puntuacion-total"></div>
+        </div>
+        <!-- Pantalla de transición de nivel y pregunta especial -->
+        <div id="level-special-question-screen" class="screen hidden">
+            <h2>¡Felicidades, mi amor!</h2>
+            <p class="mensaje-nivel">
+                Has superado el nivel. Ahora responde esta pregunta especial para continuar:
+            </p>
+            <div id="pregunta-especial"></div>
+            <div id="opciones-especial"></div>
+        </div>
+        <!-- Pantalla final -->
+        <div id="end-game-screen" class="screen hidden">
+            <h2>¡Juego completado!</h2>
+            <div id="mensaje-final"></div>
+            <button id="btn-reiniciar" class="btn-grande">Reiniciar juego</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

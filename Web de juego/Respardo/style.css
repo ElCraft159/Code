@@ -1,0 +1,203 @@
+/* style.css - Estilos cálidos y responsivos para el quiz de Jenny */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8cdda 0%, #1d2b64 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-container {
+    background: #fff8f0;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+    padding: 32px 24px;
+    max-width: 430px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h1, h2 {
+    color: #d72660;
+    margin-bottom: 18px;
+}
+
+.mensaje-bienvenida {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.mensaje-nivel {
+    font-size: 1.1rem;
+    color: #1d2b64;
+    margin-bottom: 24px;
+}
+
+#nivel-info {
+    font-size: 1.1rem;
+    color: #d72660;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#progreso-nivel {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+#pregunta {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1d2b64;
+}
+
+#opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#opciones button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #d72660;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(215,38,96,0.08);
+}
+
+#opciones button:hover:not([disabled]) {
+    background: #f46036;
+    transform: translateY(-2px) scale(1.03);
+}
+
+#opciones button:active:not([disabled]) {
+    background: #a91d3a;
+}
+
+#opciones button.correcta {
+    background: #27ae60 !important;
+    color: #fff;
+}
+
+#opciones button.incorrecta {
+    background: #e74c3c !important;
+    color: #fff;
+}
+
+#puntuacion-total {
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.btn-grande {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 10px;
+    background: #f46036;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(244,96,54,0.10);
+}
+
+.btn-grande:hover {
+    background: #d72660;
+}
+
+#mensaje-final {
+    font-size: 1.15rem;
+    color: #1d2b64;
+    margin-bottom: 24px;
+}
+
+/* Estilos para la pantalla de pregunta especial */
+#pregunta-especial {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1d2b64;
+}
+
+#opciones-especial {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#opciones-especial button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #d72660;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+#opciones-especial button:hover:not([disabled]) {
+    background: #f46036;
+    transform: translateY(-2px) scale(1.03);
+}
+
+#opciones-especial button.correcta {
+    background: #27ae60 !important;
+}
+
+#opciones-especial button.incorrecta {
+    background: #e74c3c !important;
+}
+
+
+@media (max-width: 500px) {
+    .quiz-container {
+        padding: 14px 2px;
+        max-width: 99vw;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    #pregunta {
+        font-size: 1rem;
+    }
+    #opciones button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+    .btn-grande {
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
+}
